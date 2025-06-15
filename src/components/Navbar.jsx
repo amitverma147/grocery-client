@@ -32,7 +32,10 @@ const Navbar = () => {
           <img src={assets.search_icon} alt="search icon" className="w-4 h-4" />
         </div>
 
-        <div onClick={()=>navigate('/cart')} className="relative cursor-pointer">
+        <div
+          onClick={() => navigate("/cart")}
+          className="relative cursor-pointer"
+        >
           <img
             src={assets.nav_cart_icon}
             alt="cart icon"
@@ -58,10 +61,16 @@ const Navbar = () => {
               className="w-10"
             />
             <ul className="hidden group-hover:block absolute top-10 right-0 bg-white shadow border border-gray-200 py-2.5 w-30 rounded-md text-sm z-40">
-              <li onClick={()=>navigate('my-orders')} className="p-1.5 pl-3 hover:bg-[#4fbf8b]/10 cursor-pointer">
+              <li
+                onClick={() => navigate("my-orders")}
+                className="p-1.5 pl-3 hover:bg-[#4fbf8b]/10 cursor-pointer"
+              >
                 My Orders
               </li>
-              <li onClick={logout} className="p-1.5 pl-3 hover:bg-[#4fbf8b]/10 cursor-pointer">
+              <li
+                onClick={logout}
+                className="p-1.5 pl-3 hover:bg-[#4fbf8b]/10 cursor-pointer"
+              >
                 Logout
               </li>
             </ul>
@@ -96,7 +105,7 @@ const Navbar = () => {
               My Orders
             </NavLink>
           )}
-          <NavLink to="#"> Contact</NavLink>
+          <NavLink to="/" onClick={()=>setOpen(false)}> Contact</NavLink>
           {!user ? (
             <button
               onClick={() => {
