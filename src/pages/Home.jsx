@@ -1,7 +1,6 @@
 import BestSeller from "../components/BestSeller";
 import Categories from "../components/Categories";
 import MainBanner from "../components/MainBanner";
-
 import BottomBanner from "../components/BottomBanner";
 import NewsLetter from "../components/NewsLetter";
 
